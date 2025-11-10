@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Birra y Bíceps - Cotizador</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/gym.png" type="image/png">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="historial"><a href="./historial.html"><span title="Ver Historial">📋</span></a></div>
+    
+    <header class="header-banner">
+        <h1 class="center">💪 Birra y Bíceps 🍺</h1>
+        <p class="slogan center">Porque la vida es equilibrio.</p>
+    </header>
+
+    <div class="center div-cotizador">
+        <h2 class="center separador">Calculá tu Membresía</h2>
+        
+        <label for="plan">Seleccioná tu plan</label>
+        <select id="plan">
+            <option selected disabled>Elegí un plan...</option>
+            <!-- Aquí se cargarán dinámicamente las opciones de planes usando JavaScript -->
+        </select>
+        <p class="descripcion-plan" id="descripcionPlan"></p>
+        
+        <label for="sucursal">Seleccioná la sucursal</label>
+        <select id="sucursal">
+            <option selected disabled>Elegí una sucursal...</option>
+            <!-- Aquí se cargarán dinámicamente las opciones de sucursales usando JavaScript -->
+        </select>
+        
+        <label for="duracion">Duración de la membresía</label>
+        <select id="duracion">
+            <option value="1">1 mes</option>
+            <option value="3">3 meses (5% descuento)</option>
+            <option value="6">6 meses (10% descuento)</option>
+            <option value="12" selected>12 meses (20% descuento)</option>
+        </select>
+        
+        <label class="adicionales-titulo">Servicios Adicionales (opcionales)</label>
+        <div class="adicionales-container" id="adicionalesContainer">
+            <!-- Aquí se cargarán dinámicamente los checkboxes de servicios adicionales -->
+        </div>
+        
+        <div class="center separador">
+            <div class="precio-container">
+                <p class="precio-label">Precio Mensual: <span class="precio-valor">$ <span id="precioMensual">0.00</span></span></p>
+                <p class="precio-label">Total a Pagar: <span class="precio-total">$ <span id="precioTotal">0.00</span></span></p>
+            </div>
+        </div>
+        
+        <div class="center separador">
+            <button class="button button-outline">💪 Contratar Ahora</button>
+            <!-- Este botón calculará la cotización y redirigirá a la página de historial -->
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>🏋️ Entrenamiento de calidad | 🥗 Asesoramiento nutricional | 🎯 Resultados garantizados</p>
+    </footer>
+    
+    <!-- Enlace al archivo de JavaScript principal -->
+    <script defer src="./js/main.js"></script>
+</body>
+</html>
+

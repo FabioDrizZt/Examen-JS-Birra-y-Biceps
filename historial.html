@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Birra y Bíceps - Historial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/gym.png" type="image/png">
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/historial.js"></script>
+</head>
+<body>
+    <header class="header-banner">
+        <h1 class="center">📋 Historial de Membresías</h1>
+        <p class="slogan center">Tus cotizaciones guardadas</p>
+    </header>
+
+    <div class="center div-cotizador">
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Plan</th>
+                    <th>Sucursal</th>
+                    <th>Duración</th>
+                    <th>Servicios Adicionales</th>
+                    <th>Precio Mensual</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las cotizaciones se llenarán aquí dinámicamente -->
+            </tbody>
+        </table>
+        
+        <div id="mensajeVacio" class="mensaje-vacio" style="display: none;">
+            <p>😊 Aún no tenés cotizaciones guardadas</p>
+            <p>¡Empezá a crear tu membresía ideal!</p>
+        </div>
+        
+        <div class="center separador">
+            <a href="index.html"><button class="button button-outline">⬅️ Volver</button></a>
+            <button class="button button-danger" id="clearHistorial">🗑️ Limpiar Historial</button>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>💪 Birra y Bíceps - Porque la vida es equilibrio 🍺</p>
+    </footer>
+</body>
+</html>
+

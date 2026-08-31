@@ -71,7 +71,7 @@ jobs:
           timeout: 5
           max-score: 20
 
-      - name: Informe de resultados para Classroom
+      - name: Informe de resultados para Classmoji
         uses: classroom-resources/autograding-grading-reporter@v1
         env:
           TEST-LINK-CSS-JS_RESULTS: '${{ steps.test-link-css-js.outputs.result }}'

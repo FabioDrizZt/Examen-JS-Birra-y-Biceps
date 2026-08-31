@@ -1,4 +1,4 @@
-# Crea issues de la actividad para repos creados desde GitHub Classroom.
+# Crea issues de la actividad para repos creados desde Classmoji.
 # Idempotente: crea solamente los issues faltantes por titulo.
 name: Setup assignment issues
 
@@ -187,7 +187,7 @@ jobs:
                   {
                       "name": label_name,
                       "color": "1d76db",
-                      "description": "Issue generado automaticamente para el examen de Classroom",
+                      "description": "Issue generado automaticamente para el examen de Classmoji",
                   },
               )
               print(f"Etiqueta creada: {label_name}")

@@ -1,0 +1,254 @@
+:root {
+  --primary-gold: #f59e0b;
+  --dark-gold: #d97706;
+  --bg-dark: #0f172a;
+  --card-bg: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+  --accent-green: #22c55e;
+  --radius: 12px;
+  --font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-family);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-banner {
+  background: linear-gradient(135deg, #78350f, #b45309);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+}
+
+.header-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header-banner h1 {
+  font-size: 2.2rem;
+  color: #fef3c7;
+  margin-bottom: 0.5rem;
+}
+
+.slogan {
+  color: #fde68a;
+  font-size: 1.05rem;
+}
+
+.main-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3);
+}
+
+.div-cotizador h2,
+.historial-section h2 {
+  color: var(--primary-gold);
+  font-size: 1.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+label {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+select {
+  background-color: #0f172a;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-main);
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+select:focus {
+  border-color: var(--primary-gold);
+}
+
+.descripcion-plan {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  font-style: italic;
+  min-height: 1.2rem;
+}
+
+.adicionales-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+  background-color: #0f172a;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.adicional-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.adicional-item input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-gold);
+  cursor: pointer;
+}
+
+.precio-container {
+  background-color: rgb(15 23 42 / 0.7);
+  border-left: 4px solid var(--primary-gold);
+  padding: 1.25rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.precio-label {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+}
+
+.precio-valor {
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.precio-total {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent-green);
+}
+
+.button {
+  padding: 0.85rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.button-primary {
+  background-color: var(--primary-gold);
+  color: #0f172a;
+  width: 100%;
+}
+
+.button-primary:hover {
+  background-color: var(--dark-gold);
+}
+
+.button-outline {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+}
+
+.button-outline:hover {
+  background-color: #334155;
+  color: var(--text-main);
+}
+
+.historial-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.historial-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.historial-item {
+  background-color: #0f172a;
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.historial-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.historial-titulo {
+  font-weight: 700;
+  color: var(--primary-gold);
+}
+
+.historial-detalles {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.historial-monto {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-green);
+}
+
+.historial-vacio {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 1.5rem;
+  font-style: italic;
+}
+
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border-color);
+  margin-top: 2rem;
+}

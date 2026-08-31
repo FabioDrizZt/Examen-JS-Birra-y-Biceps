@@ -1,0 +1,40 @@
+{
+  "planes": [
+    {
+      "id": "basico",
+      "nombre": "Básico (Musculación)",
+      "descripcion": "Acceso libre a sala de pesas y musculación",
+      "precio": 8000
+    },
+    {
+      "id": "full",
+      "nombre": "Full (Musculación + Clases)",
+      "descripcion": "Musculación + Clases grupales de functional y cardio",
+      "precio": 12000
+    },
+    {
+      "id": "premium",
+      "nombre": "Premium (Full + Natación)",
+      "descripcion": "Acceso total + Spinning + Pileta libre y natación",
+      "precio": 18000
+    },
+    {
+      "id": "vip",
+      "nombre": "VIP Warrior (All Inclusive)",
+      "descripcion": "Premium + Spa + Sauna + Pinta de cerveza artesanal post-entreno 🍺",
+      "precio": 25000
+    }
+  ],
+  "sucursales": [
+    { "id": "centro", "nombre": "Sede Centro", "factor": 1.1 },
+    { "id": "norte", "nombre": "Sede Zona Norte", "factor": 1.2 },
+    { "id": "sur", "nombre": "Sede Zona Sur", "factor": 1.0 },
+    { "id": "oeste", "nombre": "Sede Zona Oeste", "factor": 1.05 }
+  ],
+  "adicionales": [
+    { "id": "nutri", "nombre": "Plan Nutricional Deportivo", "precio": 3500 },
+    { "id": "personal", "nombre": "Entrenador Personalizado", "precio": 6000 },
+    { "id": "toallas", "nombre": "Servicio de Casillero y Toallas Premium", "precio": 1200 },
+    { "id": "birra-club", "nombre": "Membresía Club de la Cerveza Artesanal", "precio": 4500 }
+  ]
+}

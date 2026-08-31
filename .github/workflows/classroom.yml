@@ -1,0 +1,83 @@
+name: Pruebas automáticas (Classroom)
+on:
+  push:
+  workflow_dispatch:
+  repository_dispatch:
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Vincular CSS y JS al HTML
+        id: test-link-css-js
+        uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: '1. Vinculación de CSS y JS en index.html'
+          command: 'bash scripts/classroom-check.sh link-css-js'
+          expected-output: 'CORRECTO'
+          comparison-method: exact
+          timeout: 5
+          max-score: 20
+
+      - name: Consumir API de Servicios con fetch
+        id: test-fetch-api
+        uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: '2. Consumo de la API Backend local con fetch'
+          command: 'bash scripts/classroom-check.sh fetch-api'
+          expected-output: 'CORRECTO'
+          comparison-method: exact
+          timeout: 5
+          max-score: 20
+
+      - name: Renderizar opciones y adicionales en el DOM
+        id: test-render-dom
+        uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: '3. Renderizado de planes, sucursales y adicionales'
+          command: 'bash scripts/classroom-check.sh render-dom'
+          expected-output: 'CORRECTO'
+          comparison-method: exact
+          timeout: 5
+          max-score: 20
+
+      - name: Calcular precios y procesar cotización
+        id: test-events-logic
+        uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: '4. Cálculo reactivo y procesamiento de cotización'
+          command: 'bash scripts/classroom-check.sh events-logic'
+          expected-output: 'CORRECTO'
+          comparison-method: exact
+          timeout: 5
+          max-score: 20
+
+      - name: Persistencia y gestión con LocalStorage
+        id: test-storage-history
+        uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: '5. Persistencia y limpieza de historial en localStorage'
+          command: 'bash scripts/classroom-check.sh storage-history'
+          expected-output: 'CORRECTO'
+          comparison-method: exact
+          timeout: 5
+          max-score: 20
+
+      - name: Informe de resultados para Classroom
+        uses: classroom-resources/autograding-grading-reporter@v1
+        env:
+          TEST-LINK-CSS-JS_RESULTS: '${{ steps.test-link-css-js.outputs.result }}'
+          TEST-FETCH-API_RESULTS: '${{ steps.test-fetch-api.outputs.result }}'
+          TEST-RENDER-DOM_RESULTS: '${{ steps.test-render-dom.outputs.result }}'
+          TEST-EVENTS-LOGIC_RESULTS: '${{ steps.test-events-logic.outputs.result }}'
+          TEST-STORAGE-HISTORY_RESULTS: '${{ steps.test-storage-history.outputs.result }}'
+        with:
+          runners: test-link-css-js,test-fetch-api,test-render-dom,test-events-logic,test-storage-history
